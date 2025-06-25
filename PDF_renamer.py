@@ -459,4 +459,5 @@ btn_next.grid(
 btn_home.grid(row=0, column=3, padx=10, ipadx=10, pady=5, sticky="w")
 
 if __name__ == "__main__":
+    root.focus_force()
     root.mainloop()
