@@ -192,7 +192,7 @@ def next():
             lbl_pdf.pack(fill="both", expand=1)
             # After creating the toplevel window,
             # force focus back to rootwindow.
-            root.after(10, lambda: root.focus_force())
+            root.after(10, root.focus_force)
 
 
 def start():
@@ -325,13 +325,13 @@ frm_top_btns = tk.Frame(master=frm_top, background="#99ccff")
 frm_top_btns.grid(row=1, column=0)
 
 btn_start = ttk.Button(
-    master=frm_top_btns, width=5, text="Start", command=lambda: start()
+    master=frm_top_btns, width=5, text="Start", command=start
 )
 # btn_start.focus()
 btn_start.grid(row=1, column=0, padx=(5, 10), pady=(0, 15), sticky="e")
 
 btn_top_quit = ttk.Button(
-    master=frm_top_btns, width=5, text="Quit", command=lambda: quit()
+    master=frm_top_btns, width=5, text="Quit", command=quit
 )
 btn_top_quit.grid(row=1, column=1, padx=(10, 5), pady=(0, 15), sticky="w")
 
@@ -430,16 +430,16 @@ frm_bottom_btns = tk.Frame(
 frm_bottom_btns.grid(row=5, column=0, columnspan=2, padx=8, pady=(5, 10))
 
 btn_save = ttk.Button(
-    master=frm_bottom_btns, width=5, text="Save", command=lambda: save()
+    master=frm_bottom_btns, width=5, text="Save", command=save
 )
 btn_back = ttk.Button(
-    master=frm_bottom_btns, width=5, text="Back", command=lambda: back()
+    master=frm_bottom_btns, width=5, text="Back", command=back
 )
 btn_next = ttk.Button(
-    master=frm_bottom_btns, width=5, text="Next", command=lambda: next()
+    master=frm_bottom_btns, width=5, text="Next", command=next
 )
 btn_home = ttk.Button(
-    master=frm_bottom_btns, width=5, text="Home", command=lambda: home()
+    master=frm_bottom_btns, width=5, text="Home", command=home
 )
 btn_save.grid(row=0, column=0, padx=10, ipadx=10, pady=5, sticky="e")
 btn_back.grid(
